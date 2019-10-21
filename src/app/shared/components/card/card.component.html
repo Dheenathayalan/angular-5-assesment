@@ -1,0 +1,22 @@
+<span></span>
+<mat-card class="card">
+    <mat-card-header>
+        <div fxLayout="row" fxFlex>
+            <div fxFlex="90" class="text-center">
+                <mat-card-title><b>{{company.title}}</b></mat-card-title>
+            </div>
+            <div fxFlex="10">
+                <button mat-icon-button class="text-right" (click)="favorite(company)">
+                    <mat-icon *ngIf="!company.isFavourite">star_border</mat-icon>
+                    <mat-icon *ngIf="company.isFavourite">star</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-card-header>
+    <mat-card-content>  
+        <button mat-button (click)="info(company)">Info</button>
+    </mat-card-content>
+    <mat-card-actions class="text-right">
+        <button mat-button (click)="open(company)">Open</button>
+    </mat-card-actions>
+</mat-card>

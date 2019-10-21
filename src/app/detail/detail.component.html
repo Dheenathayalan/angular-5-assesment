@@ -1,0 +1,16 @@
+<div class="padding-10">
+    <h1>Company Detail</h1>
+    <mat-divider></mat-divider>
+    <br>
+    <div fxLayout="row" *ngFor="let key of detail | keys" class="margin-vertical-10">
+        <div fxFlex>
+            <span>{{key | titlecase}}</span>
+        </div>
+        <div fxFlex="10">
+            <span>:</span>
+        </div>
+        <div fxFlex>
+            <span>{{detail[key]}}</span>
+        </div>
+    </div>
+</div>

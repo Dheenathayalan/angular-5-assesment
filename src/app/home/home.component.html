@@ -1,0 +1,12 @@
+<div class="padding-10">
+    <h1>Company List</h1>
+    <mat-divider></mat-divider>
+</div>
+<br>
+<div class="padding-10" *ngIf="companyList.length > 0">
+    <div fxLayout="row wrap" fxLayoutWrap>
+        <div *ngFor="let company of companyList" fxFlex.lg="33" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+            <card-component [data]="company"></card-component><br>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div mat-dialog-title>Info</div>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" *ngFor="let key of company | keys" class="margin-vertical-10">
+    <div fxFlex>
+        <span>{{key | titlecase}}</span>
+    </div>
+    <div fxFlex="10">
+        <span>:</span>
+    </div>
+    <div fxFlex>
+        <span>{{company[key]}}</span>
+    </div>
+</div>
